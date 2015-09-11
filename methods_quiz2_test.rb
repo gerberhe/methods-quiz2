@@ -37,4 +37,14 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal false,@m.squirrels_play?(false,100)
 		assert_equal false,@m.squirrels_play?(false,40)
 	end
+
+	def red_ticket
+		assert_equal 10,@m.red_ticket(2,2,2)
+		assert_equal 5,@m.red_ticket(1,1,1)
+		assert_equal 5,@m.red_ticket(0,0,0)
+		assert_equal 1,@m.red_ticket(0,2,1)
+		assert_equal 1,@m.red_ticket(0,1,1)
+		assert_equal 0,@m.red_ticket(1,0,1)
+		assert_equal 0,@m.red_ticket(2,2,1)
+	end
 end
