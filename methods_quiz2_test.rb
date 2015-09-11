@@ -21,7 +21,7 @@ class MethodsQuizTest < MiniTest::Test
 	end
 
 	def test_max_maybe
-		assert_equal 7,@m.max_maybe(7,2)
+		assert_equal 8,@m.max_maybe(8,2)
 		assert_equal 0,@m.max_maybe(4,4)
 		assert_equal 5,@m.max_maybe(5,10)
 		assert_equal 6,@m.max_maybe(6,11)

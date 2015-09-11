@@ -8,6 +8,25 @@ module MethodsQuiz2
 		return a + b
 	end
 
+	def max_maybe(a,b)
+		c = a % 5
+		d = b % 5
+
+		if a == b
+			return 0
+		elsif c == d
+			if a > b
+				return b
+			elsif a < b
+				return a
+			end
+		elsif a > b
+			return a
+		elsif a < b
+			return b
+		end
+	end
+
 
 	private
 
