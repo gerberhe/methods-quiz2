@@ -35,6 +35,18 @@ module MethodsQuiz2
 		end
 	end
 
+	def red_ticket(a,b,c)
+		if a == 2 && b == 2 && c == 2
+			return 10
+		elsif a == b && a == c && b == c
+			return 5
+		elsif a != b && a != c
+			return 1
+		else
+			return 0
+		end 
+	end
+
 
 	private
 
