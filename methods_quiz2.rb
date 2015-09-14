@@ -1,10 +1,12 @@
 module MethodsQuiz2
 	
-	def without_doubles(a,b)
-		if numbers_equal?(a,b) == true
-			a == 6 ? (a = 1) && (b = 1) : a = (a + 1)
+	def without_doubles(a,b,c)
+		if c
+			if numbers_equal?(a,b) == true
+				a == 6 ? (a = 1) : a = (a + 1)
+			end
 		end
-
+			
 		return a + b
 	end
 
@@ -13,37 +15,33 @@ module MethodsQuiz2
 		d = b % 5
 
 		if a == b
-			return 0
-		elsif c == d
-			if a > b
-				return b
-			elsif a < b
-				return a
+			0
+		else
+			if c == d
+				a > b ? b : a
+			else 
+				a < b ? b : a
 			end
-		elsif a > b
-			return a
-		elsif a < b
-			return b
 		end
 	end
 
-	def squirrels_play?(summer,temp)
-		if summer == true
+	def squirrels_play?(temp,summer)
+		if summer
 			temp >= 60 && temp <= 100 ? true : false
-		elsif summer == false
+		else
 			temp >= 60 && temp <= 90 ? true : false
 		end
 	end
 
 	def red_ticket(a,b,c)
 		if a == 2 && b == 2 && c == 2
-			return 10
-		elsif a == b && a == c && b == c
-			return 5
+			10
+		elsif a == b && b == c
+			5
 		elsif a != b && a != c
-			return 1
+			1
 		else
-			return 0
+			0
 		end 
 	end
 
